@@ -1,0 +1,14 @@
+<div *ngFor="let follower of followers" class="media">
+    <div class="media-left">
+      <a routerLink="#">
+        <img class="md-avatar rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg"
+         alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">
+        <a [routerLink]="['/followers', follower.login, follower.id]">{{ follower.login }}</a>
+      </h4>
+      <a routerLink="follower.html_url">{{ follower.html_url }}</a>
+    </div>
+  </div>
